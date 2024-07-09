@@ -1,0 +1,1 @@
+{"name":"Local: e-reverseString","url":"d:\\cpp\\recursion\\e-reverseString.cpp","tests":[{"id":1719223190590,"input":"abcde","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cpp\\recursion\\e-reverseString.cpp","group":"local","local":true}

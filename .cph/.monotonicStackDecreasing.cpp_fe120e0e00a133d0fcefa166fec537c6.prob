@@ -1,0 +1,1 @@
+{"name":"Local: monotonicStackDecreasing","url":"d:\\cpp\\monotonicStackDecreasing.cpp","tests":[{"id":1719720104446,"input":"8\n3 1 4 1 5 9 2 6","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cpp\\monotonicStackDecreasing.cpp","group":"local","local":true}

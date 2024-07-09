@@ -1,0 +1,1 @@
+{"name":"Local: binaryTree","url":"d:\\cpp\\binaryTree.cpp","tests":[{"id":1710581476831,"input":"1 2 4 -1 -1 5 -1 -1 3 6 -1 -1 7 -1 -1","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cpp\\binaryTree.cpp","group":"local","local":true}
