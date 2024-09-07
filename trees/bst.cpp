@@ -125,14 +125,14 @@ int main()
     TreeNode *root = NULL;
     // cout << "Enter data to create BST: " << endl;
     takeInput(root);
-    levelOrder(root);
+    // levelOrder(root);
 
-    cout << endl;
+    // cout << endl;
     preorderTraversal(root);
-    cout << endl;
-    inorderTraversal(root);
-    cout << endl;
-    preorderTraversal(root);
+    // cout << endl;
+    // inorderTraversal(root);
+    // cout << endl;
+    // preorderTraversal(root);
 
     return 0;
 }

@@ -133,7 +133,7 @@ void postorderOneStack(Node *node)
             {
                 temp = st.top();
                 st.pop();
-                res.push_back(temp->data);
+                res.push_back(temp->data); // reached leaf node
 
                 // going back to the root
                 while (!st.empty() && temp == st.top()->right)
@@ -185,7 +185,7 @@ int main()
     // cout << endl;
 
     // cout << endl;
-    preorder(root);
+    // preorder(root);
     // cout << endl;
     // cout << endl;
     // cout << endl;
@@ -193,10 +193,10 @@ int main()
     cout << endl;
     // cout << endl;
     cout << endl;
-    // inorder(root);
-    postorderTwoStacks(root);
+    inorder(root);
+    // postorderTwoStacks(root);
     cout << endl;
-    postorderRec(root);
+    // postorderRec(root);
 
     return 0;
 }

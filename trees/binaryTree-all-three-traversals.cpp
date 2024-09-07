@@ -16,7 +16,7 @@ struct Node
 
 Node *buildTree(Node *root)
 {
-    cout << "Enter data: ";
+    // cout << "Enter data: ";
     int data;
     cin >> data;
     if (data == -1)
@@ -24,10 +24,10 @@ Node *buildTree(Node *root)
 
     root = new Node(data);
 
-    cout << "Enter data for left side of " << data << ": " << endl;
+    // cout << "Enter data for left side of " << data << ": " << endl;
     root->left = buildTree(root->left);
 
-    cout << "Enter data for right side of " << data << ": " << endl;
+    // cout << "Enter data for right side of " << data << ": " << endl;
     root->right = buildTree(root->right);
 
     return root;

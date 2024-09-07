@@ -103,6 +103,46 @@ vector<int> postorderTraversal2(Node *root)
     return postorder;
     // 1 2 4 -1 -1 5 -1 -1 3 6 -1 -1 7 -1 -1
 }
+void postorderOneStack(Node *root)
+{
+    // L R N
+
+    stack<Node *> st;
+    Node *curr = root;
+
+    while (curr || !st.empty())
+    {
+        if (curr)
+        {
+            st.push(curr);
+            curr = curr->left;
+        }
+
+        else
+        {
+            Node *temp = st.top()->right;
+            if (temp) // marks the start of a new sub-tree.
+            {
+                curr = temp;
+            }
+
+            else
+            {
+                // backtracking
+                temp = st.top();
+                cout << temp->data << " ";
+                st.pop();
+
+                while (!st.empty() && temp == st.top()->right)
+                {
+                    temp = st.top();
+                    cout << temp->data << " ";
+                    st.pop();
+                }
+            }
+        }
+    }
+}
 
 int main()
 {
