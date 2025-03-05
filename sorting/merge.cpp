@@ -12,7 +12,7 @@ void printArray(int arr[], int size)
     printf("\n");
 }
 
-// } Driver Code Ends
+// Divide Sort Merge
 class Solution
 {
 private:
@@ -42,9 +42,10 @@ private:
         }
 
         for (int i = l; i <= r; i++)
-        {
-            arr[i] = temp[i - l];
-        }
+            f
+            {
+                arr[i] = temp[i - l];
+            }
     }
 
 public:

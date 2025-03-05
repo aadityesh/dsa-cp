@@ -11,24 +11,52 @@ void generate(int idx, int sum, int target, vector<int> subset, vector<vector<in
         return;
     }
 
-#This Works
+    // #This Works
+
     subset.push_back(input[idx]);
-    sum += input[idx];
+    sum += input[idx]; // 3 + 2
     generate(idx + 1, sum, target, subset, res, input);
 
     subset.pop_back();
     sum -= input[idx];
     generate(idx + 1, sum, target, subset, res, input);
 
-#This does NOT Works
-    subset.push_back(input[idx]);
-    generate(idx + 1, sum + input[idx], target, subset, res, input);
+    // #This does NOT Works
+    //     subset.push_back(input[idx]);
+    //     generate(idx + 1, sum + input[idx], target, subset, res, input);
 
-    subset.pop_back();
-    sum -= input[idx];
-    generate(idx + 1, sum, target, subset, res, input);
+    //     subset.pop_back();
+    //     sum -= input[idx];
+    //     generate(idx + 1, sum, target, subset, res, input);
 
     // 3 1 _
+}
+
+bool checkSumExists(int idx, int sum, int target,
+                    vector<int> subset, vector<vector<int>> &res, vector<int> input)
+{
+    // cout << sum << endl;
+    if (idx == input.size())
+    {
+        if (sum == target)
+            return true;
+
+        return false;
+    }
+
+    // #This Works
+
+    subset.push_back(input[idx]);
+    sum += input[idx]; // 3 + 2
+    if (checkSumExists(idx + 1, sum, target, subset, res, input))
+        return true;
+
+    subset.pop_back();
+    sum -= input[idx];
+    if (checkSumExists(idx + 1, sum, target, subset, res, input))
+        return true;
+
+    return false;
 }
 
 int main()
